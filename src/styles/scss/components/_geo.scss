@@ -1,0 +1,28 @@
+.geo {
+    @include backgroundBlocks;
+    @include grid;
+
+    position: relative;
+
+    grid-template-columns: 15vw 3vw 2vw;
+    align-items: end;
+
+    color: $color-text;
+
+    background-image: url(../../images/geo/statistics.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 32em;
+
+    &__title {
+        @include componentTitle ($color-text, $title-fz, $title-weight );
+    }
+    
+    &__text-country {
+        @include text (1em, 600);
+    }
+
+    &__text-city {
+        @include text (1em, 500);
+    }
+}

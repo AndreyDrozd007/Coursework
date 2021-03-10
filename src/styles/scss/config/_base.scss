@@ -1,0 +1,42 @@
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Khula', sans-serif;
+}
+
+.wrap {
+    position: relative;
+
+    max-width: 1600px;
+    margin: 0 auto;
+    height: 1100px;
+    display: grid;
+    overflow: hidden;
+    
+    background: #e5e5e5;;
+
+    &::before {
+        position: absolute;
+
+        z-index: 100;
+        left: 0;
+        top: 0;
+
+        content: url(../../images/background/union.png) ;
+        background-repeat: no-repeat;
+    }
+    &::after {
+        position: absolute;
+
+        z-index: 300;
+        right: 0;
+        bottom: 0;
+
+        content: url(../../images/background/ellipse.png);
+
+        background-repeat: no-repeat;
+    }
+}

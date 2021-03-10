@@ -1,0 +1,74 @@
+@mixin backgroundBlocks  {
+    background-color: #282c31;
+    border-radius: 13px;
+    border: 1px solid #4D4D4D;
+}
+
+@mixin componentTitle ($color-text, $title-fz, $title-weight ) {
+    color: $color-text; 
+    font-size: $title-fz;
+    font-weight: $title-weight;
+}
+
+@mixin text ($text-fz, $text-weight) {
+    font-size: $text-fz;
+    font-weight: $text-weight;
+}
+
+@mixin arrow ($arrow-top, $arrow-left, $arrow-transform) {
+    content: '';
+    position: absolute;
+    top: $arrow-top;
+    left: $arrow-left;
+    transform: $arrow-transform;
+    width: 10px;
+    height: 3px;
+    background-color: $color-text;
+}
+
+@mixin grid {
+    display: grid;
+    justify-content: space-between;
+    align-content: space-between; 
+    padding: 2em;
+}
+
+@mixin circleCard ($circle-left) {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: $circle-left;
+    width: 5px;
+    height: 5px;
+    border-radius: 50px;
+    background-color: $color-text;
+}
+
+@mixin audienceText {
+    position: relative;
+    bottom: 0;
+    right: 0;
+}
+
+@mixin audienceTextBefore ($audience-bgr, $audience-color-before) {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: calc(50% - 51px);
+    width: 8px;
+    height: 8px;
+    background:transparent $audience-bgr;
+    border: 1.5px solid $audience-color-before;
+    border-radius: 2px;
+}
+
+@mixin square ($color-square) {
+    content: ''; 
+    position: absolute;
+    left: calc(50% - 43px);
+    width: 11px;
+    height: 11px;
+            
+    background-color: $color-square;
+    border-radius: 30%;
+}

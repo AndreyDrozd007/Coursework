@@ -1,0 +1,48 @@
+.audience {
+    @include backgroundBlocks;
+    @include grid;
+    grid-column: 1 / 3;
+    color: $color-text;  
+    grid-template-columns: 18vw 16.4vw 5vw 5vw;
+    background-image: url(../../images/audience/audience.png);
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &__title {
+        @include componentTitle ($color-text, $title-fz, $title-weight);
+    }
+
+    &__link {
+        @include componentTitle ($color-text, 12px, 500);
+        position: relative;
+        text-transform: none;
+        text-decoration: none;
+    }
+
+    &__link::before {
+        @include arrow(0, 140px, rotate(45deg)); 
+    }
+
+    &__link::after {
+        @include arrow(0, 145px, rotate(-45deg));
+    }
+
+    &__text-total {
+        @include text (12px, 600);
+        @include audienceText;
+    }
+
+    &__text-total::before { 
+        @include audienceTextBefore (url(../../images/audience/vector.png) no-repeat, #e786e7);
+    }
+
+    &__text-follower {
+        @include text (12px, 600);
+        @include audienceText;
+    }
+    
+    &__text-follower::before {
+        @include  audienceTextBefore (none ,#7f7fd5);
+    }
+    
+}

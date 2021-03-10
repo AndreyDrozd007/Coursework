@@ -1,0 +1,33 @@
+.reach {
+    @include backgroundBlocks;
+    @include grid;
+    grid-template-areas: 
+    'title ..'
+    'img text';
+
+
+    &__title {
+        @include componentTitle ($color-text, $title-fz, $title-weight);
+        grid-area: title;
+    }
+
+    &__img {
+        grid-area: img;
+    }
+
+    &__text {
+        @include text (1em, 600);
+        position: relative;  
+        grid-area: text;
+        &--mobile {
+            margin-top: 20px;
+            &::before {
+            @include square (#e786d7);
+            }
+        }
+    
+        &--desktop::before {
+            @include square  ( #7f7fd5);  
+        }
+    }
+}

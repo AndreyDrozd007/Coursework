@@ -1,0 +1,135 @@
+.sidebar {
+
+    display: grid;
+    position: absolute;
+    grid-template-columns: 80px;
+    grid-template-rows: 1fr repeat(7, 80px) 1fr;
+
+    min-height: 878px;
+    width: 80px;
+
+    @include backgroundBlocks;
+    border-radius: 13px 0 0 13px;
+
+    &__link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+    }
+    
+    &__link:first-child,
+    .lable__toggle-button{
+        width: 100%;
+    }
+    
+    .lable__toggle-button{
+        align-self: flex-end;
+    }
+    
+    svg{
+        fill: #DFE6F1;
+        transition: fill ease .5s;
+    }
+    
+    &__link:before{
+        visibility: hidden;
+        opacity: 0;
+        content: '';
+        position: absolute;
+        top: calc(50% - 25px);
+        left: 0;
+        width: 4px;
+        height: 50px;
+        background-color: #7F7FD5;
+        border-radius: 0 5px 5px 0;
+    
+        transition: all ease .5s;
+    }
+    
+    &__link:hover:before {
+        visibility: visible;
+        opacity: 1;
+        background-color: #7F7FD5;
+    }
+    
+    &__link:hover svg {
+        fill:#7F7FD5;
+    }
+
+    .lable__toggle-button {
+        width: 60px;
+        height: 30px;
+        align-self: center;
+        justify-self: center;
+        border: 0.5 solid #cacaca;
+
+    }
+
+    .input__toggle-button {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 32px;
+        background: #7f7fd5;
+        
+        border-radius: 50px;
+        outline: none;
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+    }
+    
+    .input__toggle-button::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        left: 5px;
+        top: 5px;
+
+        width: 20px;
+        height: 20px;
+        background: #e9e9e9;
+        border-radius: 50%;
+        
+        transform: translateX(0);
+
+        transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+    }
+    /*.input__toggle-button::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        left: 9px;
+        top: 9px;
+
+        width: 13.9px;
+        height: 13.9px;
+        background: #7f7fd5;
+        border-radius: 50%;
+
+        transform: translateX(0);
+
+        transition: all 0.2s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+    }*/
+
+    .input__toggle-button:checked::before {
+        transform: translateX(calc(100% + 9px));
+        background-color: #7f7fd5;  
+    }
+
+    /*.input__toggle-button:checked::after {
+        transform: translateX(calc(100% + 15px));
+        background-color: #e9e9e9;  
+    }*/
+
+    .input__toggle-button:checked {
+        background-color: #e9e9e9;
+    }
+}    

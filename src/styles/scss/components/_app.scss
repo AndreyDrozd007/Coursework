@@ -1,0 +1,29 @@
+.app {
+    display: grid;
+    position: absolute;
+    justify-self: center;
+    align-self: center;
+    z-index: 200;
+    width: 1280px;
+    height: 880px;
+    border-radius: 14px;
+
+    background-color: #212427;
+    color: $color-text;
+}
+
+.container {
+    display: grid;
+    width: auto;
+    height: auto;
+    margin: 25px 15px 0 100px;
+    //margin: 0 0 269px 100px;
+    //justify-self: center;
+    //grid-template-columns: 31% 31% 31%;
+    //grid-template-rows: 18% 21% 38% 45%;
+    //grid-gap: 3em;
+    grid-template-rows: 100px 148px 242px 242px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 32px;
+    
+}
