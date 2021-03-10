@@ -1,0 +1,45 @@
+.card {
+    @include backgroundBlocks;
+    display: grid;
+    grid-template-columns: 9.3vw 5.3vw;
+    grid-template-rows: 5vw 1.3vw;
+    justify-content: space-between;
+    align-content: space-between;
+    padding: 2em;
+    
+    &__title {
+        @include componentTitle ($color-text, $title-fz, $title-weight);
+    }
+
+    &__link {
+        position: relative;
+        width: 5px;
+        height: 5px;
+        border-radius: 50px;
+        top: 5px;
+        left: calc(50% - 5px);
+        background-color: $color-text;
+    }
+
+    &__link::before {
+        @include circleCard(20px);
+    }
+
+    &__link::after {
+        @include circleCard(10px);
+    }
+
+    &__subtitle {
+        @include text ($title-fz, 500);
+    }
+
+    &__text-up {
+        @include text ($title-fz, 500);
+        background: url(../../images/card/vektor-up.png) no-repeat 55px 0;
+    }
+
+    &__text-down {
+        @include text ($title-fz, 500);
+        background: url(../../images/card/vektor-down.png) no-repeat 55px 0;
+    }
+}   
